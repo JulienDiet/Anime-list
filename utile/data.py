@@ -36,3 +36,12 @@ def store_animes_in_db(animes):
     # Commit the changes and close the connection
     conn.commit()
     conn.close()
+
+
+def fetch_animes_from_db():
+    conn = sqlite3.connect('animes.db')
+    c = conn.cursor()
+    c.execute("SELECT * FROM animes")
+    animes = c.fetchall()
+    conn.close()
+    return animes
