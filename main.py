@@ -1,12 +1,11 @@
 import utile.fetch_api as fetch_api
+import utile.data as data
 
 
 def main():
     top_50_animes = fetch_api.top_50_animes_from_myanimelist()
-    for anime in top_50_animes:
-        for key, value in anime.items():
-            print(f'{key}: {value}')
-        print()
+    print(top_50_animes)
+    data.store_animes_in_db(top_50_animes)
 
 
 if __name__ == '__main__':
