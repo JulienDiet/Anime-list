@@ -1,8 +1,9 @@
 import tkinter as tk
-from PIL import Image, ImageTk, ImageFilter  # Importez ImageFilter pour les filtres d'image
+from PIL import Image, ImageTk
 import requests
 import io
-import utile.data as data  # Assurez-vous que votre module `data` est correctement importé
+import utile.data as data
+
 
 def show_anime_cards(animes):
     root = tk.Tk()
