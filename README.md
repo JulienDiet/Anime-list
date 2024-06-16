@@ -1,32 +1,35 @@
-# Anime List Application
+# Anime List Web Application
 
-This application is a Python-based project that fetches the top 50 animes from MyAnimeList using their API, stores the data in a SQLite database, and displays the information in a GUI using Tkinter.
+Cette application est un projet basé sur Python qui récupère les 50 meilleurs animes de MyAnimeList en utilisant leur API, stocke les données dans une base de données SQLite, et affiche les informations dans une application web en utilisant Flask.
 
-## Features
+## Caractéristiques
 
-- Fetches data from MyAnimeList API.
-- Stores the fetched data in a SQLite database.
-- Displays the anime data in a GUI.
+- Récupère les données de l'API MyAnimeList.
+- Stocke les données récupérées dans une base de données SQLite.
+- Affiche les données d'anime dans une application web.
 
-## Files
+## Fichiers
 
-- `utile/fetch_api.py`: Contains the function to fetch the top 50 animes from MyAnimeList.
-- `database/script_db.py`: Contains the function to fetch the anime data and store it in the database.
-- `utile/data.py`: Contains functions to store the fetched anime data in the SQLite database and fetch the stored data from the database.
-- `main.py`: Contains the main function that fetches the anime data from the database and displays it in the GUI.
+- `utile/fetch_api.py`: Contient la fonction pour récupérer les 50 meilleurs animes de MyAnimeList.
+- `database/script_db.py`: Contient la fonction pour récupérer les données d'anime et les stocker dans la base de données.
+- `utile/data.py`: Contient des fonctions pour stocker les données d'anime récupérées dans la base de données SQLite et récupérer les données stockées de la base de données.
+- `app.py`: Contient la fonction principale qui récupère les données d'anime de la base de données et les affiche dans l'application web.
+- `templates/index.html`: Contient le code HTML pour l'interface utilisateur de l'application web.
+- `static/css/index.css`: Contient le code CSS pour le style de l'application web.
 
-## How to Run
+## Comment exécuter
 
-1. Ensure you have Python installed on your system.
-2. Clone the repository to your local machine.
-3. Navigate to the project directory in your terminal.
-4. Run the `main.py` file using the command `python main.py`.
+1. Assurez-vous d'avoir Python installé sur votre système.
+2. Clonez le dépôt sur votre machine locale.
+3. Naviguez vers le répertoire du projet dans votre terminal.
+4. Installez les dépendances nécessaires avec la commande `pip install -r requirements.txt`.
+5. Exécutez le fichier `app.py` en utilisant la commande `python app.py`.
+6. Ouvrez votre navigateur web et accédez à `http://localhost:5000`.
 
-## Dependencies
+## Dépendances
 
 - Python
-- Tkinter
-- PIL (Pillow)
+- Flask
 - requests
 - sqlite3
 - http.client
@@ -34,4 +37,4 @@ This application is a Python-based project that fetches the top 50 animes from M
 
 ## Note
 
-This project is for educational purposes only. The MyAnimeList API key used in this project is a placeholder and will not work. Please replace it with your own API key to fetch data from MyAnimeList.
+Ce projet est à des fins éducatives uniquement. La clé API MyAnimeList utilisée dans ce projet est un placeholder et ne fonctionnera pas. Veuillez la remplacer par votre propre clé API pour récupérer les données de MyAnimeList.
