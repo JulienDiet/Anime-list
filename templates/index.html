@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+<body>
+    <div>
+        {% for anime in animes %}
+        {% if loop.index0 % 3 == 0 %}
+        <div style="display: flex; justify-content: center;">
+        {% endif %}
+        <div class="card">
+            <img src="{{ anime[3] }}" alt="{{ anime[1] }}">
+            <div class="card-content">
+                <span class="rank">Rank: {{ anime[0] }}</span>
+                <h2>{{ anime[1] }}</h2>
+                <p>Episodes: {{ anime[5] }}</p>
+                <p>Date de parution: {{ anime[6] }}</p>
+                <p>Popularity: {{ anime[7] }}</p>
+                <p>Genres: {{ anime[8] }}</p>
+                <p>Rating: {{ anime[9] }}</p>
+                <a href="{{ anime[2] }}">Lien vers la page</a>
+            </div>
+        </div>
+        {% if loop.index % 3 == 0 or loop.last %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
