@@ -2,7 +2,7 @@ import sqlite3
 
 def store_animes_in_db(animes):
     # Connect to the SQLite database (it will be created if it doesn't exist)
-    conn = sqlite3.connect('animes.db')
+    conn = sqlite3.connect('database/animes.db')
     # Create a cursor
     c = conn.cursor()
     # Drop the table if it exists and create a new one
@@ -39,7 +39,7 @@ def store_animes_in_db(animes):
 
 
 def fetch_animes_from_db():
-    conn = sqlite3.connect('animes.db')
+    conn = sqlite3.connect('database/animes.db')
     c = conn.cursor()
     c.execute("SELECT * FROM animes")
     animes = c.fetchall()
